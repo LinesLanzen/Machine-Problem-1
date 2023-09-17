@@ -1,0 +1,34 @@
+﻿@model Student
+
+<h2>Student Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Model.FirstName @Model.LastName</td>
+    </tr>
+    <tr>
+        <td>Prelim Grade</td>
+        <td>@Model.PrelimGrade</td>
+    </tr>
+    <tr>
+        <td>Final Grade</td>
+        <td>@Model.FinalGrade</td>
+    </tr>
+    <tr>
+        <td>Semestral Grade</td>
+        <td>@Model.SemGrade.ToString("F2")</td>
+    </tr>
+    <tr>
+        <td>Transmuted Grade</td>
+        <td>@Model.TransmutedGrade</td>
+    </tr>
+</table>
+
+@Html.ActionLink("Back to Student List", "Index")
+
+@Html.ActionLink("Back to Student List", "Index")

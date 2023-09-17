@@ -1,0 +1,30 @@
+﻿@model List<Student>
+
+<h2>Student List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Prelim Grade</th>
+            <th>Final Grade</th>
+            <th>Semestral Grade</th>
+            <th>Transmuted Grade</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName @student.LastName</td>
+                <td>@student.PrelimGrade</td>
+                <td>@student.FinalGrade</td>
+                <td>@student.SemGrade.ToString("F2")</td>
+                <td>@student.TransmutedGrade</td>
+                <td>@Html.ActionLink("Details", "ShowDetails", new { id = student.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

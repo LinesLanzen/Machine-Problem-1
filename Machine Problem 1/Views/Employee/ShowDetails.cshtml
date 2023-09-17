@@ -1,0 +1,48 @@
+﻿@model Employee
+
+<h2>Employee Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Model.FirstName @Model.LastName</td>
+    </tr>
+    <tr>
+        <td>Birthday</td>
+        <td>@Model.Birthday.ToString("yyyy-MM-dd")</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Email Domain</td>
+        <td>@Model.GetEmailDomain()</td>
+    </tr>
+    <tr>
+        <td>Email Username</td>
+        <td>@Model.GetEmailUsername()</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>@Model.EmploymentStatus</td>
+    </tr>
+    <tr>
+        <td>Daily Salary</td>
+        <td>$@Model.SalaryPerDay.ToString("F2")</td>
+    </tr>
+    <tr>
+        <td>Monthly Salary</td>
+        <td>$@Model.SalaryPerMonth.ToString("F2")</td>
+    </tr>
+</table>
+
+@Html.ActionLink("Back to Employee List", "Index")
